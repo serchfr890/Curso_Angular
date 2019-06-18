@@ -3,8 +3,15 @@
     <input matInput placeholder="Usuario"[(ngModel)]="username">
   </mat-form-field>
   <mat-form-field class="input-login">
-    <input matInput placeholder="Password" [(ngModel)]="password">
+    <input matInput placeholder="Password" [(ngModel)]="password" type="password">
   </mat-form-field>
-
   <button mat-stroked-button color="primary" (click)="login()">Ingresar</button>
+
+  <section class="chat-container">
+    <div class="chat-button">ChatBot de prueba</div>
+    <div class="chat-content">
+      <iframe src='https://webchat.botframework.com/embed/Axity_Echo_Bot?s=BGfSdXyfJ1c.MzZb4kWYk66FJk_rZ84YRxdZs7X4TpV1cuOXXnWOFPE'></iframe>
+    </div>
+  </section>
+  <!--<seb-ng-magic-iframe [source]='https://webchat.botframework.com/embed/Axity_Echo_Bot?s=BGfSdXyfJ1c.MzZb4kWYk66FJk_rZ84YRxdZs7X4TpV1cuOXXnWOFPE''></seb-ng-magic-iframe>-->
 </div>

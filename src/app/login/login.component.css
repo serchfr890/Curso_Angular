@@ -5,3 +5,33 @@
 .login-container mat-form-field{
   height: 100px;
 }
+
+.chat-container{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  position: fixed;
+  bottom: 0px;
+  right: 15px;
+  z-index: 999;
+}
+
+.chat-button{
+  width: 100%;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  padding: 4px 0;
+  background-color: #337AB7;
+  text-align: center;
+  color: beige;
+}
+
+.chat-content{
+  margin: 0px;
+  padding: 0px;
+  background-color: #FFF;
+  display: none;
+}

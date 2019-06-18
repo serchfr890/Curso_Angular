@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatButtonModule } from '@angular/material/button';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-login',
@@ -28,4 +30,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  // $(".chat-button").on('click', funtion(e){
+  //   e.preventDefault();
+  //   $(".chat-content").slideToggle("fast");
+  // });
 }
