@@ -1,17 +1,24 @@
-<div class="login-container">
+<div class="login-container" [formGroup]="formLogin">
+  <h1>Login</h1>
   <mat-form-field class="input-login">
-    <input matInput placeholder="Usuario"[(ngModel)]="username">
+    <input matInput placeholder="Usuario" formControlName="username">
   </mat-form-field>
   <mat-form-field class="input-login">
-    <input matInput placeholder="Password" [(ngModel)]="password" type="password">
+    <input matInput placeholder="Password" type="password" formControlName="password">
   </mat-form-field>
-  <button mat-stroked-button color="primary" (click)="login()">Ingresar</button>
+  <button mat-stroked-button color="primary" (click)="login()" [disabled]="formLogin.invalid || loading">Ingresar</button>
 
-  <section class="chat-container">
+
+
+
+
+  <!--Integración del chatbot-->
+  <!--<section class="chat-container">
     <div class="chat-button">ChatBot de prueba</div>
+
     <div class="chat-content">
       <iframe src='https://webchat.botframework.com/embed/Axity_Echo_Bot?s=BGfSdXyfJ1c.MzZb4kWYk66FJk_rZ84YRxdZs7X4TpV1cuOXXnWOFPE'></iframe>
     </div>
-  </section>
+  </section>-->
   <!--<seb-ng-magic-iframe [source]='https://webchat.botframework.com/embed/Axity_Echo_Bot?s=BGfSdXyfJ1c.MzZb4kWYk66FJk_rZ84YRxdZs7X4TpV1cuOXXnWOFPE''></seb-ng-magic-iframe>-->
 </div>

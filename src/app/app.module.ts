@@ -10,6 +10,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 // import { NgMagicIframeModule } from '@sebgroup/ng-magic-iframe';
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
