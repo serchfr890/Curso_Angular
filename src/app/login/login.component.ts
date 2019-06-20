@@ -3,6 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiService } from '../services/api.service';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { DataService } from '../services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
   formLogin: FormGroup;
   loading = false;
 // tslint:disable-next-line: variable-name
-  constructor(private _snackBar: MatSnackBar, private _api: ApiService, private _fb: FormBuilder, private _dataService: DataService) {
+  constructor(private _snackBar: MatSnackBar, private _api: ApiService, private _fb: FormBuilder, private _dataService: DataService,
+    private _route: Router) {
        this._dataService.getIsLoading().subscribe(val => {
          console.log('Isloading', val);
          this.loading = val;
@@ -46,6 +48,8 @@ export class LoginComponent implements OnInit {
         this._snackBar.open(res.token, 'ok', {
           duration:3000
         });
+        console.log('recibi una respuesta');
+        this._route.navigate(['colors']);
       }, err => {
         this._dataService.setIsLoading(false);
         this._snackBar.open(err.error.error, 'ok', {

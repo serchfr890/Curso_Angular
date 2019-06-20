@@ -13,11 +13,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { TabletColorsComponent } from './tablet-colors/tablet-colors.component';
 // import { NgMagicIframeModule } from '@sebgroup/ng-magic-iframe';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    TabletColorsComponent
   ],
   imports: [
     BrowserModule,
